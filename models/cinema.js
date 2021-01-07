@@ -19,7 +19,12 @@ Cinema.prototype.findByGenre = function(filmGenre){
 
 Cinema.prototype.releaseYearExists = function(year){
   const results = this.films.filter(film => film.year === year);
-  return results != []
+  return results.length > 0;
+}
+
+Cinema.prototype.allRuntimesAreOver = function(runtime){
+  const results = this.films.filter(film => film['length'] > runtime);
+  return results.length === this.films.length;
 }
 
 
