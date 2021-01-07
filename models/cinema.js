@@ -12,13 +12,13 @@ Cinema.prototype.findByTitle = function(filmTitle){
   return results
 }
 
-Cinema.prototype.findByGenre = function(filmGenre){
-  const results = this.films.filter(film => film.genre === filmGenre);
+Cinema.prototype.findByGenre = function(filmGenre){  
+  const results = this.films.filter(film => film.genre === filmGenre); // can use .some instead of filter here
   return results
 }
 
 Cinema.prototype.releaseYearExists = function(year){
-  const results = this.films.filter(film => film.year === year);
+  const results = this.films.filter(film => film.year === year); // can use .every instead of filter here
   return results.length > 0;
 }
 
