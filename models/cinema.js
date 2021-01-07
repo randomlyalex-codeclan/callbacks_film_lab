@@ -27,5 +27,11 @@ Cinema.prototype.allRuntimesAreOver = function(runtime){
   return results.length === this.films.length;
 }
 
+Cinema.prototype.allFilmsRuntime = function(){
 
+const totalRuntime = this.films.reduce( (runningTotal, film) => {
+  return runningTotal + film.length;
+}, 0);
+return totalRuntime
+}
 module.exports = Cinema;
