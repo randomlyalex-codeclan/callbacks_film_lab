@@ -28,11 +28,10 @@ Cinema.prototype.allRuntimesAreOver = function(runtime){
 }
 
 Cinema.prototype.allFilmsRuntime = function(){
-
-const totalRuntime = this.films.reduce( (runningTotal, film) => {
-  return runningTotal + film.length;
-}, 0);
-return totalRuntime
+  const totalRuntime = this.films.reduce( (runningTotal, film) => {
+    return runningTotal + film.length;
+  }, 0);
+  return totalRuntime
 }
 
 Cinema.prototype.filmsByProperty = function(cat, value){
