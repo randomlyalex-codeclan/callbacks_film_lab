@@ -17,5 +17,10 @@ Cinema.prototype.findByGenre = function(filmGenre){
   return results
 }
 
+Cinema.prototype.releaseYearExists = function(year){
+  const results = this.films.filter(film => film.year === year);
+  return results != []
+}
+
 
 module.exports = Cinema;
